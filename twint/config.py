@@ -58,8 +58,8 @@ class Config:
     Pandas_clean: bool = True
     Lowercase: bool = True
     Pandas_au: bool = True
-    Proxy_host: str = ""
-    Proxy_port: int = 0
+    Proxy_host: str = "socks5://127.0.0.1"
+    Proxy_port: int = 7890
     Proxy_type: object = None
     Tor_control_port: int = 9051
     Tor_control_password: str = None
@@ -82,6 +82,9 @@ class Config:
     TranslateDest: str = "en"
     Backoff_exponent: float = 3.0
     Min_wait_time: int = 0
-    Bearer_token: str = None
-    Guest_token: str = None
+    Bearer_token: str = None #
+    Guest_token: str = None #
     deleted: list = None
+
+
+

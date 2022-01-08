@@ -66,8 +66,10 @@ def dict_to_url(dct):
 
 
 def get_connector(config):
-    logme.debug(__name__ + ':get_connector')
+    logme.debug("*"*100)
+    llogme.debug(__name__ + ':get_connector')
     _connector = None
+
     if config.Proxy_host:
         if config.Proxy_host.lower() == "tor":
             _connector = ProxyConnector(
@@ -75,7 +77,13 @@ def get_connector(config):
                 port=9050,
                 rdns=True)
         elif config.Proxy_port and config.Proxy_type:
+            logme.debug("*"*100)
+            logme.debug("Proxy")
+            logme.debug("======", config.Proxy_type)
+
             if config.Proxy_type.lower() == "socks5":
+                # print("+"*100)
+                # print("socks5")
                 _type = ProxyType.SOCKS5
             elif config.Proxy_type.lower() == "socks4":
                 _type = ProxyType.SOCKS4

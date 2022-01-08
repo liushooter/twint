@@ -7,11 +7,11 @@ def jobone():
 	print ("Fetching Tweets")
 	c = twint.Config()
 	# choose username (optional)
-	c.Username = "insert username here"
+	c.Username = "liushooter"
 	# choose search term (optional)
-	c.Search = "insert search term here"
+	c.Search = "bitcoin"
 	# choose beginning time (narrow results)
-	c.Since = "2018-01-01"
+	c.Since = "2020-01-01"
 	# set limit on total tweets
 	c.Limit = 1000
 	# no idea, but makes the csv format properly
@@ -44,18 +44,18 @@ def jobtwo():
 # run once when you start the program
 
 jobone()
-jobtwo()
+# jobtwo()
 
 # run every minute(s), hour, day at, day of the week, day of the week and time. Use "#" to block out which ones you don't want to use.  Remove it to active. Also, replace "jobone" and "jobtwo" with your new function names (if applicable)
 
-# schedule.every(1).minutes.do(jobone)
-schedule.every().hour.do(jobone)
+schedule.every(1).minutes.do(jobone)
+# schedule.every().hour.do(jobone)
 # schedule.every().day.at("10:30").do(jobone)
 # schedule.every().monday.do(jobone)
 # schedule.every().wednesday.at("13:15").do(jobone)
 
 # schedule.every(1).minutes.do(jobtwo)
-schedule.every().hour.do(jobtwo)
+# schedule.every().hour.do(jobtwo)
 # schedule.every().day.at("10:30").do(jobtwo)
 # schedule.every().monday.do(jobtwo)
 # schedule.every().wednesday.at("13:15").do(jobtwo)
